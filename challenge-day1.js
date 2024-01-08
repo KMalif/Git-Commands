@@ -10,14 +10,14 @@ const bandingkanAngka = (angka1, angka2)=>{
 
 const balikKata = (kata) =>{
   for (let i = kata.length-1; i >=0 ; i--){
-    console.log(kata[i]);
+    return kata[i];
   }
 }
 
 const konversiMenit = (detik)=>{
-  const mnt = Math.floor(detik/60);
-  const scd = detik%60;
-  console.log(mnt + ':' + scd);
+  const minutes = `${Math.floor(detik / 60)}`
+  const seconds = `${detik - minutes * 60}`.padStart(2, "0");
+  return `${minutes}:${seconds}`;
 }
 
 
