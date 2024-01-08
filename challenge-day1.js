@@ -9,10 +9,10 @@ const bandingkanAngka = (angka1, angka2)=>{
 }
 
 const balikKata = (kata) =>{
-  for (let i = kata.length-1; i >=0 ; i--){
-    return kata[i];
+    for (let i = kata.length-1; i >= 0 ; i--){
+      console.log(kata[i]);
+    }
   }
-}
 
 const konversiMenit = (detik)=>{
   const minutes = `${Math.floor(detik / 60)}`
