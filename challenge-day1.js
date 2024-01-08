@@ -44,12 +44,14 @@ var input = [
 
 const dataHandling = (params) =>{
     for(let i = 0 ; i <= params.length-1; i++){
-        console.log(`ID : ${params[i][0]}`);
-        console.log(`Nama : ${params[i][1]}`);
-        console.log(`Alamat : ${params[i][2]}`);
-        console.log(`Tanngal Lahir : ${params[i][3]}`);
-        console.log(`Hobby : ${params[i][4]}`);
+        console.log(`ID : ${params[i][i]}`);
+        console.log(`Nama : ${params[i][i]}`);
+        console.log(`Alamat : ${params[i][i]}`);
+        console.log(`Tanngal Lahir : ${params[i][i]}`);
+        console.log(`Hobby : ${params[i][i]}`);
+        console.log('');
     }
+  }
   }
 
 
