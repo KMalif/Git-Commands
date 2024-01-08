@@ -1,4 +1,5 @@
 # Git-Commands Cheat sheet
+# Dokumentasi lengkap dapat dilihat di link berikut [git documentation](https://git-scm.com/doc)
 
 # Setup
 | Command   |Description   |Example   |  
