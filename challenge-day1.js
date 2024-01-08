@@ -21,13 +21,36 @@ const konversiMenit = (detik)=>{
 }
 
 
-const xo = (str) =>{
-  
+const xo = str =>{
+    const x = [];
+    const o = [];
+    for(let i = 0 ; i <= str.length-1; i++ ){
+        if (str[i] === 'x'){
+            x.push(str[i])
+        }
+        else if(str[i] === 'o'){
+            o.push(str[i])
+        }
+    }
+    return x.length == o.length ? true : false;
 }
 
+var input = [
+  ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
+  ["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"],
+  ["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],
+  ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
+]
+
 const dataHandling = (params) =>{
-  
-}
+    for(let i = 0 ; i <= params.length-1; i++){
+        console.log(`ID : ${params[i][0]}`);
+        console.log(`Nama : ${params[i][1]}`);
+        console.log(`Alamat : ${params[i][2]}`);
+        console.log(`Tanngal Lahir : ${params[i][3]}`);
+        console.log(`Hobby : ${params[i][4]}`);
+    }
+  }
 
 
 
