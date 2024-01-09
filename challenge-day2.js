@@ -6,6 +6,12 @@ const palindrome=(kata) => {
     }
     return kata === newStr ? true : false
   }
+  
+console.log(palindrome('katak')); // true
+console.log(palindrome('blanket')); // false
+console.log(palindrome('civic')); // true
+console.log(palindrome('kasur rusak')); // true
+console.log(palindrome('mister')); // false
 
 
 // No. 2
@@ -26,6 +32,12 @@ const hitungJumlahKata = (kalimat) =>{
     }
     return newArr.length;
 }
+
+console.log(hitungJumlahKata('I have a dream')); // 4
+console.log(hitungJumlahKata('Never eat shredded wheat or cake')); // 6
+console.log(hitungJumlahKata('A song to sing')); // 4
+console.log(hitungJumlahKata('I')); // 1
+console.log(hitungJumlahKata('I believe I can code')); // 5
 
 
 
@@ -96,8 +108,12 @@ String.prototype.removeSpaces = function(){
 const passwordGenerator = (str) =>{
     return str.length >= 5 ? str.removeSpaces().setLowerUpperCase().changeVocals().reverseWord() : console.log('Minimal karakter yang diinputkan adalah 5 karakter');
 }
+console.log(passwordGenerator('Sergei Dragunov')); // 'VPNVGBRdJFGRFs'
+console.log(passwordGenerator('Dimitri Wahyudiputra')); // 'BRTVPJDVYHBwJRTJMJd'
+console.log(passwordGenerator('Alexei')); // 'JFXFLb'
+console.log(passwordGenerator('Alex')); // 'Minimal karakter yang diinputkan adalah 5 karakter'
 
-// console.log(passwordGenerator('Khafidul Mualif', '<<<Generate password'));
+
 
 // No.4
 
@@ -133,6 +149,16 @@ const meleeRangedGrouping = (str) => {
       return Object.values(heroMap);
 }
 
+console.log(meleeRangedGrouping('Razor-Ranged,Invoker-Ranged,Meepo-Melee,Axe-Melee,Sniper-Ranged'));
+// [ ['Razor', 'Invoker', 'Sniper'], ['Meepo', 'Axe'] ]
+
+console.log(meleeRangedGrouping('Drow Ranger-Ranged,Chen-Ranged,Dazzle-Ranged,Io-Ranged'));
+// [ ['Drow Ranger', 'Chen', 'Dazzle', 'Io'], [] ]
+
+console.log(meleeRangedGrouping('')); // []
+
+
+
 
 // No.5
 const stringToArray = (str) =>{
@@ -161,11 +187,22 @@ const stringToArray = (str) =>{
     return resultArr;
 }
 
+console.log(stringToArray('aqrst,ukaei,ffooo'))
 
+// result
+// [
+//   [ 'a', 'q', 'r', 's', 't' ],
+//   [ 'u', 'k', 'a', 'e', 'i' ],
+//   [ 'f', 'f', 'o', 'o', 'o' ]
+// ]
 
-// cek function
-console.log(palindrome('katak'), '<< ini no 1');
-console.log();
-console.log();
-console.log();
-console.log();
+console.log(stringToArray('qwer,tyui,asdf,ghjk'))
+
+// result
+// [
+//   [ 'q', 'w', 'e', 'r' ],
+//   [ 't', 'y', 'u', 'i' ],
+//   [ 'a', 's', 'd', 'f' ],
+//   [ 'g', 'h', 'j', 'k' ]
+// ]
+
