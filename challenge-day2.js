@@ -101,19 +101,14 @@ const passwordGenerator = (str) =>{
 
 // No.4
 
-// 'Razor-Ranged,Invoker-Ranged,Meepo-Melee,Axe-Melee,Sniper-Ranged'
-
-const meleeRangedGrouping = (str) => {
-    let resultArr = []
-    let meleeArr = []
-    let rangedArr = []
+// extention function untuk pisah string
+String.prototype.pisahString = function(separator){
     let tempArr = []
     let tempStr = ''
 
-    // pecah string jadi array dg delimiter comma
-    for (let i = 0; i <= str.length-1 ; i++){
-        if(str[i] !== ','){
-            tempStr += str[i];
+    for (let i = 0; i <= this.length-1 ; i++){
+        if(this[i] !== separator){
+            tempStr += this[i];
         }else{
             tempArr.push(tempStr);
             tempStr = ''
@@ -122,19 +117,21 @@ const meleeRangedGrouping = (str) => {
     if(tempStr){
             tempArr.push(tempStr);
     }
-
-    console.log(tempArr, '<<TEmp arr');
-
-    // masukan hero sesuai kategori ke setiap array
-    for(let i = 0; i <= tempArr; i++){
-        
-    }
-
+    return tempArr;
 }
 
-meleeRangedGrouping('Razor-Ranged,Meepo-Melee');
-
-
+const meleeRangedGrouping = (str) => {
+    const heroMap = {};
+    str.pisahString(',').forEach(heroEntry => {
+        const [hero, type] = heroEntry.pisahString('-');
+        if (!heroMap[type]) {
+          heroMap[type] = [];
+        }
+        heroMap[type].push(hero);
+      });
+      
+      return Object.values(heroMap);
+}
 
 
 // No.5
@@ -166,4 +163,9 @@ const stringToArray = (str) =>{
 
 
 
-// console.log(stringToArray('Alif Alif Mualif'));
+// cek function
+console.log(palindrome('katak'), '<< ini no 1');
+console.log();
+console.log();
+console.log();
+console.log();
